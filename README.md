@@ -1476,10 +1476,11 @@ Il est possible de déclarer des mixins dans les feuilles de style, cela permet 
 .container {
   @include shadow(2px, 2px, 5px, rgba(0, 0, 0, 0.3));
 }
-``` 
+```
 
 
-# Responsive design
+
+## Responsive design
 
 ## Introduction
 Le *responsive design* est un concept qui consiste à créer des sites web qui s'adaptent à toutes les tailles d'écran. 
@@ -1561,6 +1562,161 @@ Cette valeur est entre le minimum (16px) et le maximum (24px), donc le texte ser
 2.5vw correspond à 2.5% de 1600px : 40px.
 Mais la taille maximale est fixée à 24px, donc le texte sera affiché à 24px.`
 ```
+
+
+# Introduction Complète à Bootstrap 5
+
+
+## Qu'est-ce que Bootstrap ?
+
+Bootstrap est un **framework CSS** permettant de créer rapidement des
+interfaces web modernes et **responsives**, grâce à : - une grille
+puissante (Grid System), - des composants pré-stylés, - des classes
+utilitaires.
+
+Bootstrap 5 est entièrement compatible avec **JavaScript natif** (plus
+besoin de jQuery).
+
+
+
+## Intégrer Bootstrap (méthode recommandée : CDN)
+
+Ajoutez dans le `<head>` :
+
+``` html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+```
+
+Ajoutez avant `</body>` :
+
+``` html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+
+
+## Le système de grille (Grid System)
+
+Bootstrap utilise une **grille de 12 colonnes**.
+
+### Les principaux breakpoints :
+
+  Taille écran   Préfixe   Exemple
+  -------------- --------- -------------
+  ≥576px         `sm`      `.col-sm-6`
+  ≥768px         `md`      `.col-md-4`
+  ≥992px         `lg`      `.col-lg-3`
+
+### Exemple :
+
+``` html
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">Colonne 1</div>
+    <div class="col-12 col-md-6">Colonne 2</div>
+  </div>
+</div>
+```
+
+## Les classes utilitaires
+
+Bootstrap propose des centaines de classes utilitaires à utiliser.
+
+### Espacements
+
+-   `m-3` → margin\
+-   `p-4` → padding\
+-   `mt-5`, `pb-2` → margin-top, padding-bottom
+
+### Couleurs
+
+-   `text-primary`, `text-muted`
+-   `bg-dark`, `bg-warning`
+
+### Flexbox
+
+-   `d-flex`
+-   `justify-content-center`
+-   `align-items-center`
+-   `gap-3`
+
+### Exemple
+
+``` html
+<div class="p-4 bg-light text-center">
+  <button class="btn btn-primary">Clique</button>
+</div>
+```
+
+## Les composants essentiels
+
+### Boutons
+
+``` html
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-outline-secondary">Outline</button>
+```
+
+### Cartes (Cards)
+
+``` html
+<div class="card" style="width: 18rem;">
+  <img src="image.jpg" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">Titre</h5>
+    <p class="card-text">Lorem ipsum…</p>
+    <a href="#" class="btn btn-primary">Lire</a>
+  </div>
+</div>
+```
+
+### Navbar
+
+``` html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MonSite</a>
+  </div>
+</nav>
+```
+
+### Formulaires
+
+``` html
+<div class="mb-3">
+  <label class="form-label">Email :</label>
+  <input type="email" class="form-control">
+</div>
+```
+
+### Modales
+
+``` html
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+  Ouvrir
+</button>
+
+<div class="modal fade" id="demoModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Titre de la modale</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Contenu ici.
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## Ressources utiles
+
+-   Documentation officielle : https://getbootstrap.com/
+-   Cheat sheet : https://getbootstrap.com/docs/5.3/examples/
+
 
 # Cheatsheet CSS
 ## Texte et typographie 
